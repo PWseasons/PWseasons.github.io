@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-color: #333;
+    }
+    .snowflake {
+      position: absolute;
+      top: -50px;
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      background-color: white;
+      animation: fall 10s linear infinite;
+    }
+    .snowflake:nth-child(odd) {
+      left: -10%;
+      animation-delay: 1s;
+    }
+    .snowflake:nth-child(even) {
+      left: 110%;
+      animation-delay: 3s;
+    }
+    @keyframes fall {
+      0% {
+        top: -50px;
+        transform: translateX(0);
+        opacity: 1;
+      }
+      100% {
+        top: 100%;
+        transform: translateX(Math.random() * 20 - 10);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="snowflake"></div>
+  <div class="snowflake"></div>
+  <div class="snowflake"></div>
+  <div class="snowflake"></div>
+  <div class="snowflake"></div>
+</body>
+</html>

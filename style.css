@@ -1,0 +1,336 @@
+@font-face {
+    font-display: swap;
+    font-family: "Libre Baskerville";
+    src: url("fonts/LibreBaskerville-Bold.ttf") format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400;1,500;1,700&display=swap');
+
+/* @font-face {
+    font-display: swap;
+    font-family: "DMSans";
+    src: url("fonts/DMSans-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "DMSans";
+    src: url("fonts/DMSans-Medium.ttf") format('truetype');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "DMSans";
+    src: url("fonts/DMSans-BoldItalic.ttf") format('truetype');
+} */
+
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --cloudy-gray: #ebc0ba;
+    --darker-gray: #737373;
+
+    --darker-blue: #04050b;
+    --dark-blue: #080A17;
+
+    --amber: #FC9700;
+    --green-mint: #00D084;
+    --pink: #F78DA7;
+    --red-flamingo: #ff5d39;
+    --blue-ice: #77c2ff;
+}
+
+
+
+
+
+body {
+    font-family: "Libre Baskerville", "DM Sans";
+    color: white;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-blue);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Logo */
+.logo_box{
+    display: grid;
+
+}
+
+.logo {
+    z-index: 950;
+
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin: 30vh 60px;
+    height: auto;
+    filter: hue-rotate(180deg);
+    max-width: 90%;
+    max-height: 100vh;
+}
+
+.hrline {
+    border-top: 2px solid var(--darker-gray);
+    border-radius: 2px;
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Content */
+
+
+.main {
+    font-size: 2rem;
+    /* Center page content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main h1 {
+    font-weight: bold;
+    padding: 3rem;
+    text-align: center;
+
+}
+
+.card-section {
+    display: flex;
+    /* align-items: stretch; */
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+/* custom scrollbar color */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(33, 33, 33)
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #575757;
+    border-radius: 50px;
+}
+
+/* Text section blocks */
+
+.accordion {
+    display: flex;
+    gap: 30px;
+    margin-top: 6rem;
+
+    margin-left: 10px;
+    margin-right: 10px;
+    flex-grow: 1;
+
+}
+
+/* media query when screen width is less than 900px */
+@media screen and (max-width: 940px) {
+    .accordion {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+.how_to {
+    max-width: 625px;
+    flex:1;
+}
+
+.how_to h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
+    padding: 0;
+}
+
+.how_to p {
+    padding: 20px;
+
+}
+
+/* Base resourcepack */
+
+
+.how_to a {
+    font-family: "DM Sans";
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 100ms ease;
+    color: var(--amber);
+
+}
+
+.how_to code {
+    font-family: monospace;
+    font-weight: 100;
+    background-color: #303139;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 5px;
+}
+.how_to ol{
+    padding-left: 30px;
+}
+
+.how_to li {
+    padding-left: 10px;
+    font-family: "DM Sans";
+    font-weight: 100;
+    font-size: 1rem;
+}
+
+
+.how_to ol li::marker {
+    color: var(--blue-ice);
+    font-weight: 900;
+}
+
+.how_to li:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+
+a.helper_link {
+    color: var(--blue-ice);
+    font-size: small;
+}
+
+/* Resourcepack order */
+
+.order_seasons {
+    display: flex;
+    margin: 20px;
+
+    border-radius: 20px;
+    color: black;
+    gap: 20px;
+
+}
+
+.order_seasons h5 {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: "DM Sans";
+
+    padding-top: 35px;
+    padding-bottom: 35px;
+    border-radius: 1.2rem;
+
+    user-select: none;
+    cursor: default;
+}
+
+.order_seasons h5:nth-child(1) {
+    background-color: var(--green-mint);
+}
+
+.order_seasons:nth-child(2) h5:nth-child(1) {
+    background-color: var(--red-flamingo);
+}
+
+.order_seasons:nth-child(2) h5:nth-child(2) {
+    background-color: var(--cloudy-gray);
+}
+
+
+.order_seasons:nth-child(3) h5:nth-child(1) {
+    background-color: var(--amber);
+}
+
+.order_seasons:nth-child(3) h5:nth-child(2) {
+    background-color: var(--blue-ice);
+}
+
+.order_seasons:nth-child(3) h5:nth-child(3) {
+    background-color: #c4c4c4;
+    color: var(--darker-gray);
+    background-color: transparent;
+    outline: 4px dashed;
+    outline-offset: -4px;
+    outline-color: var(--darker-gray);
+
+    
+
+}
+
+
+.order_seasons:nth-child(4) h5:nth-child(1) {
+    background-color: transparent;
+    outline: 6px solid;
+    outline-offset: -6px;
+    outline-color: white;
+    color: white;
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 50px;
+    margin-top: 15vh;
+    margin-bottom: 40px;
+
+    background-color: var(--dark-blue);
+}
+
+.footer p,
+a {
+    font-size: .8rem;
+    font-family: "DM Sans";
+    color: rgb(190, 190, 190);
+
+    text-decoration: none;
+    font-weight: 100;
+
+    transition: 100ms ease;
+}
+
+
+.footer a {
+    font-weight: 700;
+}
+
+.footer a:hover {
+    color: var(--amber);
+}
