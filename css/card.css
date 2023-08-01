@@ -30,6 +30,7 @@
 .card-content h4{
     font-size: 1.6rem;
     font-weight: bold;
+    padding: 0px 5px;
 }
 
 .card-content h5{
